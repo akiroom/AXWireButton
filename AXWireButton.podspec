@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                        It looks good for iOS7
                        DESC
   s.homepage         = "https://github.com/akiroom/AXWireButton"
-  s.screenshots      = "https://github.com/akiroom/AXWireButton/master/Screenshot.png"
+  s.screenshots      = "https://raw.githubusercontent.com/akiroom/AXWireButton/master/Screenshot.png"
   s.license          = 'MIT'
   s.author           = { "Hiroki Akiyama" => "aki-hiroki@nifty.com" }
   s.source           = { :git => "https://github.com/akiroom/AXWireButton.git", :tag => s.version.to_s }
