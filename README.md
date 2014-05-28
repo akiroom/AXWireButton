@@ -8,7 +8,7 @@
 
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+![Screenshot](https://github.com/akiroom/AXWireButton/master/Screenshot.png)
 
 ## Installation
 
@@ -23,5 +23,4 @@ Hiroki Akiyama, aki-hiroki@nifty.com
 
 ## License
 
-AXWireButton is available under the MIT license. See the LICENSE file for more info.
-
+MIT license. See the LICENSE file for more info.
