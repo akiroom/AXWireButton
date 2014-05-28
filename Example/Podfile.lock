@@ -1,0 +1,14 @@
+PODS:
+  - AXWireButton (0.1.0)
+
+DEPENDENCIES:
+  - AXWireButton (from `../`)
+
+EXTERNAL SOURCES:
+  AXWireButton:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AXWireButton: 6fe023be530d0928343c5534b0edaef790a614a9
+
+COCOAPODS: 0.33.1

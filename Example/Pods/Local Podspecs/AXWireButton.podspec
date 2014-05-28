@@ -8,12 +8,13 @@ Pod::Spec.new do |s|
   s.name             = "AXWireButton"
   s.version          = "0.1.0"
   s.summary          = "Wire style button for iOS7"
-  s.description      = <<-DESC
-                       UIButton with Wire / Border style.
-                       It looks good for iOS7
-                       DESC
+  #s.description      = <<-DESC
+  #                     An optional longer description of AXWireButton
+  #                     * Markdown format.
+  #                     * Don't worry about the indent, we strip it!
+  #                     DESC
   s.homepage         = "https://github.com/akiroom/AXWireButton"
-  s.screenshots      = "https://github.com/akiroom/AXWireButton/master/Screenshot.png"
+  #s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Hiroki Akiyama" => "aki-hiroki@nifty.com" }
   s.source           = { :git => "https://github.com/akiroom/AXWireButton.git", :tag => s.version.to_s }
@@ -26,4 +27,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes'
 
   s.ios.exclude_files = 'Classes/osx'
+  # s.public_header_files = 'Classes/**/*.h'
+  # s.frameworks = 'SomeFramework', 'AnotherFramework'
+  # s.dependency 'JSONKit', '~> 1.4'
 end
