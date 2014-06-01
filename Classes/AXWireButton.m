@@ -24,19 +24,28 @@
   self.layer.borderColor = [[self titleColorForState:UIControlStateNormal] CGColor];
   self.layer.cornerRadius =
   MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
+  [self updateDisplayWithTint:NO];
 }
 
 - (void)setHighlighted:(BOOL)highlighted
 {
-//  [super setHighlighted:highlighted];
+  [self updateDisplayWithTint:highlighted];
+}
+
+- (void)setSelected:(BOOL)selected
+{
+  [self updateDisplayWithTint:selected];
+}
+
+- (void)updateDisplayWithTint:(BOOL)isTint
+{
   UIColor *textColor = [self titleColorForState:UIControlStateNormal];
-  
   switch (_highlightStyle) {
     case AXWireButtonHighlightStyleSimple:
-      if (highlighted) {
+      if (isTint) {
         textColor = [textColor colorWithAlphaComponent:0.2];
       }
-      if (highlighted) {
+      if (isTint) {
         self.titleLabel.textColor = textColor;
         self.layer.borderColor = [textColor CGColor];
       } else {
@@ -45,9 +54,8 @@
       }
       break;
     case AXWireButtonHighlightStyleFilled:
-//      [super setHighlighted:highlighted];
-      self.titleLabel.textColor = (highlighted ? self.superview.backgroundColor : textColor);
-      self.backgroundColor = (highlighted ? textColor : [UIColor clearColor]);
+      self.titleLabel.textColor = (isTint ? self.superview.backgroundColor : textColor);
+      self.backgroundColor = (isTint ? textColor : [UIColor clearColor]);
       break;
     default:
       break;
