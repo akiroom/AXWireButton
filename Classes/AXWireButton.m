@@ -7,24 +7,45 @@
 
 @implementation AXWireButton
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+  if (self = [super initWithCoder:aDecoder]) {
+    [self configureAXWireButton];
+  }
+  return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
   self = [super initWithFrame:frame];
   if (self) {
-    // Initialization code
-    _highlightStyle = AXWireButtonHighlightStyleSimple;
+    [self configureAXWireButton];
   }
   return self;
+}
+
+- (void)configureAXWireButton
+{
+  _borderWidth = 2.0;
+  _highlightStyle = AXWireButtonHighlightStyleSimple;
 }
 
 - (void)layoutSubviews
 {
   [super layoutSubviews];
-  self.layer.borderWidth = 1.0;
+  self.layer.borderWidth = _borderWidth;
   self.layer.borderColor = [[self titleColorForState:UIControlStateNormal] CGColor];
   self.layer.cornerRadius =
   MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
   [self updateDisplayWithTint:NO];
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+  if (_borderWidth != borderWidth) {
+    _borderWidth = borderWidth;
+    self.layer.borderWidth = borderWidth;
+  }
 }
 
 - (void)setHighlighted:(BOOL)highlighted
