@@ -1,16 +1,10 @@
-#
-# Be sure to run `pod lib lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "AXWireButton"
-  s.version          = "0.1.1"
-  s.summary          = "Wire style button for iOS7"
+  s.version          = "0.1.2"
+  s.summary          = "Wire style button for iOS7 flat design"
   s.description      = <<-DESC
                        UIButton with Wire / Border style.
-                       It looks good for iOS7
+                       It looks good for iOS7 flat design
                        DESC
   s.homepage         = "https://github.com/akiroom/AXWireButton"
   s.screenshots      = "https://raw.githubusercontent.com/akiroom/AXWireButton/master/Screenshot.png"

@@ -54,7 +54,7 @@
       }
       break;
     case AXWireButtonHighlightStyleFilled:
-      self.titleLabel.textColor = (isTint ? self.superview.backgroundColor : textColor);
+      self.titleLabel.textColor = (isTint ? [UIColor whiteColor] : textColor);
       self.backgroundColor = (isTint ? textColor : [UIColor clearColor]);
       break;
     default:
