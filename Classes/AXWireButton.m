@@ -77,6 +77,7 @@
       if (isTint) {
         textColor = [textColor colorWithAlphaComponent:0.2];
       }
+      self.backgroundColor = [UIColor whiteColor];
       if (isTint) {
         self.titleLabel.textColor = textColor;
         self.layer.borderColor = [textColor CGColor];
@@ -87,7 +88,7 @@
       break;
     case AXWireButtonHighlightStyleFilled:
       self.titleLabel.textColor = (isTint ? [UIColor whiteColor] : textColor);
-      self.backgroundColor = (isTint ? textColor : [UIColor clearColor]);
+      self.backgroundColor = (isTint ? textColor : [UIColor whiteColor]);
       break;
     default:
       break;

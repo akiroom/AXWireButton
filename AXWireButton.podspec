@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AXWireButton"
-  s.version          = "0.1.5"
+  s.version          = "0.1.6"
   s.summary          = "Wire style button for iOS7 flat design"
   s.description      = <<-DESC
                        UIButton with Wire / Border style.
