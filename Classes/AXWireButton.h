@@ -13,4 +13,5 @@ typedef enum : NSUInteger {
 @interface AXWireButton : UIButton
 @property (nonatomic) AXWireButtonHighlightStyle highlightStyle;
 @property (nonatomic) CGFloat borderWidth;
+@property (nonatomic, getter = isEmphasized) BOOL emphasized;
 @end

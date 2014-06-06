@@ -61,6 +61,11 @@
 - (void)updateDisplayWithTint:(BOOL)isTint
 {
   UIColor *textColor = [self titleColorForState:UIControlStateNormal];
+  if (self.isEmphasized) {
+    self.titleLabel.textColor = [UIColor whiteColor];
+    self.backgroundColor = textColor;
+    return;
+  }
   switch (_highlightStyle) {
     case AXWireButtonHighlightStyleSimple:
       if (isTint) {
