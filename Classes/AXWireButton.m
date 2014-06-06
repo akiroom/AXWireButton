@@ -58,6 +58,12 @@
   [self updateDisplayWithTint:selected];
 }
 
+- (void)setEmphasized:(BOOL)emphasized
+{
+  _emphasized = emphasized;
+  [self updateDisplayWithTint:NO];
+}
+
 - (void)updateDisplayWithTint:(BOOL)isTint
 {
   UIColor *textColor = [self titleColorForState:UIControlStateNormal];

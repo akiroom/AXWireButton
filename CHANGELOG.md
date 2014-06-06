@@ -1,5 +1,9 @@
 # AXWireButton CHANGELOG
 
+## 0.1.5
+
+little bug fix
+
 ## 0.1.4
 
 Add emphasized button.
