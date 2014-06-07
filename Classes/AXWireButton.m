@@ -58,6 +58,12 @@
   [self updateDisplayWithTint:selected];
 }
 
+- (void)setEnabled:(BOOL)enabled
+{
+  [super setEnabled:enabled];
+  [self updateDisplayWithTint:NO];
+}
+
 - (void)setEmphasized:(BOOL)emphasized
 {
   _emphasized = emphasized;

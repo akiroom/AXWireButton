@@ -1,5 +1,9 @@
 # AXWireButton CHANGELOG
 
+## 0.1.7
+
+little bug fix
+
 ## 0.1.6
 
 fix color bug.
