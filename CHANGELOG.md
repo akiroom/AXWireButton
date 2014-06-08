@@ -1,5 +1,9 @@
 # AXWireButton CHANGELOG
 
+## 0.1.8
+
+little bug fic.
+
 ## 0.1.7
 
 little bug fix
