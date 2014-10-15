@@ -1,5 +1,9 @@
 # AXWireButton CHANGELOG
 
+## 0.1.9
+
+- change text color
+
 ## 0.1.8
 
 little bug fic.
