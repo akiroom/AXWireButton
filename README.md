@@ -8,7 +8,7 @@
 
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
 
-![Screenshot](https://raw.githubusercontent.com/akiroom/AXWireButton/master/Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/akiroom/AXWireButton/master/Screenshot.gif)
 
 ## Installation
 
