@@ -19,7 +19,8 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Hiroki Akiyama, aki-hiroki@nifty.com
+akiroom, akiyama@akiroom.com
+https://twitter.com/akiroom
 
 ## License
 
