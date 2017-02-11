@@ -1,5 +1,10 @@
 # AXWireButton CHANGELOG
 
+## 1.0.0
+
+- Support iOS8 ~ iOS10
+- Support backgroundColor property.
+
 ## 0.1.9
 
 - change text color

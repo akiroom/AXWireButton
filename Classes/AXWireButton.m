@@ -5,7 +5,9 @@
 
 #import "AXWireButton.h"
 
-@implementation AXWireButton
+@implementation AXWireButton {
+  UIColor *_axWireButtonbackgroundColor;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -38,6 +40,15 @@
   self.layer.cornerRadius =
   MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds)) / 2;
   [self updateDisplayWithTint:NO];
+}
+
+- (UIColor *)backgroundColor {
+  return _axWireButtonbackgroundColor;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+  _axWireButtonbackgroundColor = backgroundColor;
+  super.backgroundColor = backgroundColor;
 }
 
 - (void)setBorderWidth:(CGFloat)borderWidth
@@ -75,7 +86,7 @@
   UIColor *textColor = [self titleColorForState:self.state];
   if (self.isEmphasized) {
     self.titleLabel.textColor = [UIColor whiteColor];
-    self.backgroundColor = textColor;
+    super.backgroundColor = textColor;
     return;
   }
   switch (_highlightStyle) {
@@ -83,7 +94,9 @@
       if (isTint) {
         textColor = [textColor colorWithAlphaComponent:0.2];
       }
-      self.backgroundColor = [UIColor clearColor];
+      super.backgroundColor = (_axWireButtonbackgroundColor ?
+                               _axWireButtonbackgroundColor :
+                               [UIColor clearColor]);
       if (isTint) {
         self.titleLabel.textColor = textColor;
         self.layer.borderColor = [textColor CGColor];
@@ -94,7 +107,11 @@
       break;
     case AXWireButtonHighlightStyleFilled:
       self.titleLabel.textColor = (isTint ? [UIColor whiteColor] : textColor);
-      self.backgroundColor = (isTint ? textColor : [UIColor clearColor]);
+      super.backgroundColor = (isTint ?
+                               textColor :
+                               (_axWireButtonbackgroundColor ?
+                                _axWireButtonbackgroundColor :
+                                [UIColor clearColor]));
       break;
     default:
       break;
